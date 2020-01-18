@@ -23,7 +23,7 @@ namespace CopiaFotos4K
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
 
@@ -72,5 +72,13 @@ namespace CopiaFotos4K
             }
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.SelectedPath = txtFolder.Text.Trim();
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                txtFolder.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
     }
 }
